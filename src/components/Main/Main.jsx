@@ -5,10 +5,12 @@ uuidv4();
 
 function Main() {
     const [todo, setTodo] = useState([]);
+
     const addTodo = todoItem => {
-        setTodo([...todo, {id: uuidv4(), task: todo, completed: false, isEditing: false}])
+        setTodo([...todo, {id: uuidv4(), task: todoItem, completed: false, isEditing: false}])
         console.log(todo)
     }
+    
   return (
     <main className='main'>
         <TodoForm addTodo={addTodo}/>
